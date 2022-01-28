@@ -1,7 +1,5 @@
 package com.moretto.bruno.employee.dto;
 
-import com.moretto.bruno.employee.entity.Disability;
-import com.moretto.bruno.employee.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,8 +32,8 @@ public class EmployeeDto {
 
     private LocalDate admissionDate;
 
-    private Role role;
+    private RoleDto role;
 
-    private Set<Disability> disabilities;
+    private Set<DisabilityDto> disabilities;
 
 }
