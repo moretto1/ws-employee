@@ -42,6 +42,9 @@ public class Employee {
     @Column(name = "ADDRESS")
     private String address;
 
+    @Column(name = "ADMISSION_DATE")
+    private LocalDate admissionDate;
+
     @ManyToOne
     @JoinColumn(name = "ROLE_ID")
     private Role role;

@@ -1,28 +1,20 @@
-package com.moretto.bruno.employee.entity;
+package com.moretto.bruno.employee.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-
-@Entity
-@Table
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Data
-public class Role {
+public class RoleDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "SALARY")
     private Double salary;
 
 }
