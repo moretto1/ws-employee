@@ -7,6 +7,7 @@ import com.moretto.bruno.employee.entity.Disability;
 import com.moretto.bruno.employee.entity.Employee;
 import com.moretto.bruno.employee.entity.Role;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -19,12 +20,12 @@ public class EmployeeMapper {
     public static EmployeeDto toDto(Employee entity) {
         RoleDto roleDto = RoleMapper.toDto(entity.getRole());
 
-        Set<DisabilityDto> disabilitiesDtoSet = null;
+        List<DisabilityDto> disabilitiesDtoSet = null;
         if(Objects.nonNull(entity.getDisabilities())) {
             disabilitiesDtoSet = entity.getDisabilities()
                     .stream()
                     .map(DisabilityMapper::toDto)
-                    .collect(Collectors.toSet());
+                    .collect(Collectors.toList());
         }
 
         return EmployeeDto.builder()
@@ -45,12 +46,12 @@ public class EmployeeMapper {
     public static Employee toEntity(EmployeeDto dto) {
         Role roleEntity = RoleMapper.toEntity(dto.getRole());
 
-        Set<Disability> disabilitiesEntitySet = null;
+        List<Disability> disabilitiesEntitySet = null;
         if(Objects.nonNull(dto.getDisabilities())) {
             disabilitiesEntitySet = dto.getDisabilities()
                     .stream()
                     .map(DisabilityMapper::toEntity)
-                    .collect(Collectors.toSet());
+                    .collect(Collectors.toList());
         }
 
         return Employee.builder()

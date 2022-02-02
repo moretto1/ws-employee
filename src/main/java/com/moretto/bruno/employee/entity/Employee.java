@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -55,6 +56,6 @@ public class Employee {
             joinColumns = @JoinColumn(name = "EMPLOYEE_ID"),
             inverseJoinColumns = @JoinColumn(name = "DISABILITY_ID")
     )
-    private Set<Disability> disabilities;
+    private List<Disability> disabilities;
 
 }

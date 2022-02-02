@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -34,6 +35,6 @@ public class EmployeeDto {
 
     private RoleDto role;
 
-    private Set<DisabilityDto> disabilities;
+    private List<DisabilityDto> disabilities;
 
 }
