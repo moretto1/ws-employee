@@ -14,7 +14,7 @@ public class SwaggerConfig {
 
     private static final String API_TITLE = "ws-employee";
     private static final String API_DESCRIPTION = "A Rest API to manage employees of a company";
-    private static final String API_VERSION = "1.1.0";
+    private static final String API_VERSION = "1.2.0";
 
     @Bean
     public Docket docket() {

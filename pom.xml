@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.moretto.bruno</groupId>
 	<artifactId>employee</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.2.0</version>
 	<name>employee</name>
 	<description>A simple Rest API to manage employee of a company</description>
 	<properties>
